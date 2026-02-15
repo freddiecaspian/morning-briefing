@@ -1,0 +1,6 @@
+.env
+venv/
+__pycache__/
+*.pyc
+episodes/*.mp3
+state.json
