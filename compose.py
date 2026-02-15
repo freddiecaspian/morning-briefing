@@ -1,37 +1,12 @@
-"""Use Claude to write an enriched podcast script from triage + calendar + vault context."""
+"""Use parallel research agents + composer to write an enriched podcast script."""
 
-import subprocess
-import json
 import os
 from datetime import datetime
 from pathlib import Path
 
-VAULT = "/Users/freddiechambers/Library/Mobile Documents/iCloud~md~obsidian/Documents/iCloud"
+from agents import run_research_and_compose
+
 SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "scripts")
-
-SYSTEM_PROMPT = """You are a podcast script writer for Freddie's personal morning briefing.
-
-You will receive:
-1. Today's triage note (tasks, priorities, context)
-2. Today's calendar events
-3. Tomorrow's calendar events
-
-Your job is to write a SHORT, conversational podcast script (target 400-600 words, 2-3 minutes spoken) that Freddie listens to on his way to class.
-
-RULES:
-- Write in a warm, direct tone. Like a sharp friend who knows your life inside out.
-- DO NOT read out raw task lists. Synthesise. "You've got 3 lectures today starting at noon" not a list of each one.
-- Prioritise ruthlessly. What ACTUALLY matters today? Lead with that.
-- Add genuine insight: spot conflicts, flag prep needed, connect dots between tasks.
-- For calendar: group similar events, mention gaps, flag back-to-backs.
-- For tasks: what's truly urgent vs what can wait? What's the smart order to tackle things?
-- If you notice duplicates or overlapping tasks, call it out.
-- Keep quick wins punchy: "Knock out these 3 before your first lecture."
-- The closer should feel human, not robotic.
-- Write ONLY the spoken script. No markdown, no headings, no stage directions.
-- No emojis. No hashtags. No wikilinks. Pure spoken word.
-- Times should be spoken naturally: "half twelve" not "12:30", "quarter to four" not "15:45".
-- DO NOT say things like "paragraph" or "section" - this is speech, not text."""
 
 
 def compose_briefing(triage_note_path, today_events, tomorrow_events):
@@ -56,55 +31,8 @@ def compose_briefing(triage_note_path, today_events, tomorrow_events):
     today_cal = _format_events(today_events, "today")
     tomorrow_cal = _format_events(tomorrow_events, "tomorrow")
 
-    # Build the prompt
-    prompt = f"""Write a morning briefing podcast script for Freddie.
-
-Date: {date_str}
-
----
-
-TRIAGE NOTE (today's tasks, priorities, and context):
-
-{triage_content}
-
----
-
-CALENDAR - TODAY:
-
-{today_cal}
-
----
-
-CALENDAR - TOMORROW:
-
-{tomorrow_cal}
-
----
-
-Search Freddie's vault (in 4. Notes/, 5. Sources/, 15. Transcripts/) for any related context that would enrich the briefing. Look for notes related to the active tasks, upcoming meetings, or people mentioned. Cross-reference and add useful context.
-
-Now write the podcast script. Remember: 400-600 words, warm and direct, spoken word only."""
-
-    # Call Claude CLI
-    result = subprocess.run(
-        [
-            "claude",
-            "-p",
-            prompt,
-            "--system-prompt", SYSTEM_PROMPT,
-            "--allowedTools", "Read,Glob,Grep",
-            "--dangerously-skip-permissions",
-        ],
-        cwd=VAULT,
-        capture_output=True,
-        text=True,
-        timeout=180,  # 3 min max
-    )
-
-    if result.returncode != 0:
-        raise RuntimeError(f"Claude script writing failed: {result.stderr[:500]}")
-
-    script = result.stdout.strip()
+    # Run parallel research agents + composer
+    script = run_research_and_compose(triage_content, today_cal, tomorrow_cal, date_str)
 
     # Save the script as a markdown file for reference
     os.makedirs(SCRIPTS_DIR, exist_ok=True)
@@ -138,7 +66,8 @@ if __name__ == "__main__":
     from collectors.calendar import get_today, get_tomorrow
     from collectors.triage import parse_triage
 
-    triage_dir = os.path.join(VAULT, "4. Notes", "Morning Triage")
+    vault = "/Users/freddiechambers/Library/Mobile Documents/iCloud~md~obsidian/Documents/iCloud"
+    triage_dir = os.path.join(vault, "4. Notes", "Morning Triage")
     latest = max(Path(triage_dir).glob("*.md"), key=lambda f: f.stat().st_mtime)
 
     print(f"Using triage: {latest.name}")
