@@ -2,5 +2,5 @@
 venv/
 __pycache__/
 *.pyc
-episodes/*.mp3
+# Episodes are committed (needed for GitHub Pages hosting)
 state.json
