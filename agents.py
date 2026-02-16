@@ -1,7 +1,8 @@
 """Parallel research agents + composer for the morning briefing pipeline.
 
-Runs three specialist agents in parallel (people, project, calendar),
-then feeds their research into a composer agent that writes the final script.
+Runs five specialist agents in parallel (people, 3x project, calendar),
+then merges project results and feeds everything into a composer agent
+that writes the final script.
 """
 
 from __future__ import annotations
@@ -96,44 +97,119 @@ Search the vault now and return your findings."""
 
 
 # ---------------------------------------------------------------------------
-# Project Agent
+# Project Agents (3 focused sub-agents, run in parallel)
 # ---------------------------------------------------------------------------
 
-PROJECT_SYSTEM_PROMPT = """You are a research assistant preparing context about PROJECTS AND TASKS for a morning briefing podcast.
+PROJECT_STATUS_SYSTEM_PROMPT = """You are a research assistant doing a QUICK STATUS ANALYSIS of tasks for a morning briefing podcast.
 
-You will receive a triage note containing active tasks and projects. Your job:
+You will receive a triage note. Your job (NO vault searching needed):
 
-1. Identify every distinct project or task in the triage note.
-2. For each one, search the vault to find:
-   - Related notes, drafts, or previous work (check 4. Notes/, 5. Sources/)
-   - How long the task has been active (look for earlier triage notes in 4. Notes/Morning Triage/)
-   - Any dependencies or blockers mentioned in related notes
-   - Relevant deadlines or context from linked notes
-3. Pay special attention to tasks marked as "carrying forward" - count how many triage versions they have appeared in.
+1. Extract every distinct project/task from the triage note.
+2. Categorise each one: urgent, active, keen, quick-win, or deferred.
+3. Spot duplicates or overlapping tasks (e.g. two tasks that are really the same thing).
+4. Identify which tasks are quick wins (< 15 min, no dependencies).
+5. Flag any tasks that seem vague or missing a clear next action.
 
-OUTPUT FORMAT - write clear prose sections, one per project:
+OUTPUT FORMAT:
 
-PROJECT: [Task/Project Name]
-Status: [active/keen/urgent/quick-win]
-Age: [How long it has been in triage, if discoverable]
-Vault context: [Related notes found, key details]
-Dependencies: [What blocks this or what this blocks]
+TASK OVERVIEW:
+[Total count, breakdown by category]
+
+DUPLICATES/OVERLAPS:
+[Any tasks that look like they're the same thing, or closely related]
+
+QUICK WINS:
+[Tasks that could be knocked out fast, with suggested grouping]
+
+ATTENTION NEEDED:
+[Vague tasks, tasks with no clear next step, anything that looks stuck]
 ---
 
-Be thorough but concise. Do NOT write a podcast script. Just deliver the research.
-Prioritise projects marked urgent or active. Quick wins need less depth."""
+Be concise. Do NOT write a podcast script. Just deliver the analysis.
+Do NOT search the vault - work only from the triage note itself."""
 
 
-def project_agent(triage_content: str) -> str:
-    """Research vault context for every project/task in the triage note."""
-    prompt = f"""Here is today's triage note. Identify all projects and tasks, then search the vault for context on each.
+def project_status_agent(triage_content: str) -> str:
+    """Quick status analysis of tasks - no vault search, pure triage analysis."""
+    prompt = f"""Analyse this triage note. Categorise tasks, spot duplicates, identify quick wins.
 
 TRIAGE NOTE:
 {triage_content}
 
-Search the vault now and return your findings."""
+Return your analysis now."""
 
-    return _call_claude(prompt, PROJECT_SYSTEM_PROMPT, tools="Read,Glob,Grep", timeout=180)
+    return _call_claude(prompt, PROJECT_STATUS_SYSTEM_PROMPT, tools=None, timeout=120)
+
+
+PROJECT_HISTORY_SYSTEM_PROMPT = """You are a research assistant checking TRIAGE HISTORY for a morning briefing podcast.
+
+You will receive a triage note with today's tasks. Your job:
+
+1. Extract the key task/project names from the triage note.
+2. Search ONLY the folder 4. Notes/Morning Triage/ for recent triage notes (last 14 days).
+3. For each task, count how many previous triages it appeared in.
+4. Flag tasks that have been carrying forward for more than 3 consecutive triages without progress.
+
+OUTPUT FORMAT - one line per task:
+
+TASK: [Name] — appeared in [N] of last [M] triages. [First seen: date if discoverable]
+TASK: [Name] — NEW (not in previous triages)
+...
+
+LINGERING TASKS (3+ consecutive triages):
+[List any tasks that have been sitting too long, with the count]
+---
+
+Be concise. Only search 4. Notes/Morning Triage/. Do NOT search the broader vault."""
+
+
+def project_history_agent(triage_content: str) -> str:
+    """Check how long each task has been in triage by scanning Morning Triage folder."""
+    prompt = f"""Check how long each task in this triage has been carrying forward.
+
+TRIAGE NOTE:
+{triage_content}
+
+Search 4. Notes/Morning Triage/ for recent triage notes and count appearances. Return your findings."""
+
+    return _call_claude(prompt, PROJECT_HISTORY_SYSTEM_PROMPT, tools="Read,Glob,Grep", timeout=180)
+
+
+PROJECT_CONTEXT_SYSTEM_PROMPT = """You are a research assistant finding VAULT CONTEXT for projects mentioned in a morning briefing podcast.
+
+You will receive a triage note. Your job:
+
+1. Extract the key project/task names from the triage note.
+2. Search 4. Notes/ and 5. Sources/ for related notes, drafts, or previous work.
+3. For each project where you find something, note:
+   - What related notes exist
+   - Key details or context from those notes
+   - Any dependencies or blockers mentioned
+   - Relevant deadlines
+
+OUTPUT FORMAT - one section per project where you found context:
+
+PROJECT: [Name]
+Related notes: [What you found]
+Key context: [Important details]
+Dependencies: [If any]
+---
+
+Skip projects where you find nothing in the vault - don't pad with "nothing found" entries.
+Be concise. Do NOT search Morning Triage/ (another agent handles that).
+Do NOT write a podcast script. Just deliver the research."""
+
+
+def project_context_agent(triage_content: str) -> str:
+    """Search vault for related notes and context per project."""
+    prompt = f"""Find vault context for the projects in this triage note.
+
+TRIAGE NOTE:
+{triage_content}
+
+Search 4. Notes/ and 5. Sources/ for related notes. Return your findings."""
+
+    return _call_claude(prompt, PROJECT_CONTEXT_SYSTEM_PROMPT, tools="Read,Glob,Grep", timeout=180)
 
 
 # ---------------------------------------------------------------------------
@@ -192,7 +268,7 @@ CALENDAR - TOMORROW:
 
 Return your analysis now."""
 
-    return _call_claude(prompt, CALENDAR_SYSTEM_PROMPT, tools=None, timeout=60)
+    return _call_claude(prompt, CALENDAR_SYSTEM_PROMPT, tools=None, timeout=120)
 
 
 # ---------------------------------------------------------------------------
@@ -294,7 +370,10 @@ Now write the podcast script. Remember: 400-600 words, warm and direct, spoken w
 
 def run_research_and_compose(triage_content: str, today_cal: str,
                              tomorrow_cal: str, date_str: str) -> str:
-    """Run three research agents in parallel, then compose the final script.
+    """Run five research agents in parallel, then compose the final script.
+
+    Agents: people, calendar, project_status, project_history, project_context.
+    The three project sub-agents are merged into one project report for the composer.
 
     Args:
         triage_content: Raw text of the triage note.
@@ -307,19 +386,23 @@ def run_research_and_compose(triage_content: str, today_cal: str,
     """
     results = {
         "people": FALLBACK_MESSAGE,
-        "project": FALLBACK_MESSAGE,
+        "project_status": FALLBACK_MESSAGE,
+        "project_history": FALLBACK_MESSAGE,
+        "project_context": FALLBACK_MESSAGE,
         "calendar": FALLBACK_MESSAGE,
     }
 
     agent_tasks = {
         "people": (people_agent, (triage_content, today_cal, tomorrow_cal)),
-        "project": (project_agent, (triage_content,)),
+        "project_status": (project_status_agent, (triage_content,)),
+        "project_history": (project_history_agent, (triage_content,)),
+        "project_context": (project_context_agent, (triage_content,)),
         "calendar": (calendar_agent, (today_cal, tomorrow_cal)),
     }
 
-    print("  Launching research agents (people, project, calendar)...")
+    print("  Launching research agents (people, 3x project, calendar)...")
 
-    with ThreadPoolExecutor(max_workers=3) as executor:
+    with ThreadPoolExecutor(max_workers=2) as executor:
         future_to_name = {}
         for name, (fn, args) in agent_tasks.items():
             future = executor.submit(fn, *args)
@@ -344,12 +427,23 @@ def run_research_and_compose(triage_content: str, today_cal: str,
         log.warning(f"Agents failed: {failed}. Composing with: {succeeded}")
     print(f"  Research complete. Succeeded: {succeeded}. Writing script...")
 
+    # Merge the 3 project sub-agent results into one report
+    project_sections = []
+    if results["project_status"] != FALLBACK_MESSAGE:
+        project_sections.append(f"STATUS ANALYSIS:\n{results['project_status']}")
+    if results["project_history"] != FALLBACK_MESSAGE:
+        project_sections.append(f"TRIAGE HISTORY:\n{results['project_history']}")
+    if results["project_context"] != FALLBACK_MESSAGE:
+        project_sections.append(f"VAULT CONTEXT:\n{results['project_context']}")
+
+    project_report = "\n\n---\n\n".join(project_sections) if project_sections else FALLBACK_MESSAGE
+
     script = composer_agent(
         triage_content=triage_content,
         today_cal=today_cal,
         tomorrow_cal=tomorrow_cal,
         people_report=results["people"],
-        project_report=results["project"],
+        project_report=project_report,
         calendar_report=results["calendar"],
         date_str=date_str,
     )
@@ -380,9 +474,15 @@ if __name__ == "__main__":
     if "--people" in sys.argv:
         print("=== PEOPLE AGENT ===")
         print(people_agent(triage, sample_cal, sample_cal))
-    elif "--project" in sys.argv:
-        print("=== PROJECT AGENT ===")
-        print(project_agent(triage))
+    elif "--project-status" in sys.argv:
+        print("=== PROJECT STATUS AGENT ===")
+        print(project_status_agent(triage))
+    elif "--project-history" in sys.argv:
+        print("=== PROJECT HISTORY AGENT ===")
+        print(project_history_agent(triage))
+    elif "--project-context" in sys.argv:
+        print("=== PROJECT CONTEXT AGENT ===")
+        print(project_context_agent(triage))
     elif "--calendar" in sys.argv:
         print("=== CALENDAR AGENT ===")
         print(calendar_agent(
@@ -398,4 +498,4 @@ if __name__ == "__main__":
         print(f"\n--- SCRIPT ({len(script.split())} words) ---\n")
         print(script)
     else:
-        print("Usage: python agents.py [--people|--project|--calendar|--compose]")
+        print("Usage: python agents.py [--people|--project-status|--project-history|--project-context|--calendar|--compose]")

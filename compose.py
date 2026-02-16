@@ -63,7 +63,7 @@ def _format_events(events, label):
 
 if __name__ == "__main__":
     # Test with latest triage and real calendar
-    from collectors.calendar import get_today, get_tomorrow
+    from collectors.cal import get_today, get_tomorrow
     from collectors.triage import parse_triage
 
     vault = "/Users/freddiechambers/Library/Mobile Documents/iCloud~md~obsidian/Documents/iCloud"

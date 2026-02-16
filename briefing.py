@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv(os.path.join(os.path.dirname(__file__), ".env"))
 
 from run_triage import run_triage
-from collectors.calendar import get_today, get_tomorrow
+from collectors.cal import get_today, get_tomorrow
 from compose import compose_briefing
 from audio import generate_audio
 from feed import create_or_update_feed
