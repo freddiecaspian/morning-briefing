@@ -51,11 +51,16 @@ def create_or_update_feed(episode_filename, episode_title, episode_description, 
 
         tree = ET.ElementTree(root)
 
-    # Update lastBuildDate
+    # Update lastBuildDate (insert before first <item> so it stays at channel top)
     existing_build = channel.find("lastBuildDate")
     if existing_build is not None:
         channel.remove(existing_build)
-    ET.SubElement(channel, "lastBuildDate").text = formatdate(mktime(episode_date.timetuple()))
+    build_date_elem = ET.Element("lastBuildDate")
+    build_date_elem.text = formatdate(mktime(episode_date.timetuple()))
+    # Find the index of the first <item> and insert before it
+    items = list(channel)
+    insert_idx = next((i for i, child in enumerate(items) if child.tag == "item"), len(items))
+    channel.insert(insert_idx, build_date_elem)
 
     # Add new episode item
     item = ET.SubElement(channel, "item")
