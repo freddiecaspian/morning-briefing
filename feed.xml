@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Your personal daily briefing - tasks, calendar, and priorities.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Fri, 27 Feb 2026 10:04:44 -0000</lastBuildDate>
+    <lastBuildDate>Fri, 27 Feb 2026 20:09:30 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -144,6 +144,15 @@ Three sessions back-to-back this afternoon, two till seven, all in the same room
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/fmv-capm-exam-walkthrough.mp3" type="audio/mpeg" length="12342796" />
       <pubDate>Fri, 27 Feb 2026 10:04:44 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/fmv-capm-exam-walkthrough.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 28 Feb 2026</title>
+      <description>Saturday the twenty-eighth of February. It's the weekend before a big Monday, so today's about prep and clearing the decks.
+
+Quick thing first - your mum's birthday. Lech reminder's been sitting there...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-02-28.mp3" type="audio/mpeg" length="3368377" />
+      <pubDate>Fri, 27 Feb 2026 20:09:30 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-02-28.mp3</guid>
     </item>
   </channel>
 </rss>
