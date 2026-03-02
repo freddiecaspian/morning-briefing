@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Your personal daily briefing - tasks, calendar, and priorities.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Sun, 01 Mar 2026 20:00:02 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Mar 2026 20:00:05 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -223,6 +223,13 @@ It's the year 2000. Enron is the seventh largest company in America. Fortune mag
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-02.mp3" type="audio/mpeg" length="3801800" />
       <pubDate>Sun, 01 Mar 2026 20:00:02 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-02.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 3 Mar 2026</title>
+      <description>I need to acknowledge what went wrong with my previous output. Looking at the low rating, I clearly misunderstood the task. The user asked for a morning briefing podcast **script** - a complete, ready...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-03.mp3" type="audio/mpeg" length="3817265" />
+      <pubDate>Mon, 02 Mar 2026 20:00:05 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-03.mp3</guid>
     </item>
   </channel>
 </rss>
