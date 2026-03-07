@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Your personal daily briefing - tasks, calendar, and priorities.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Fri, 06 Mar 2026 20:17:13 -0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Mar 2026 20:00:16 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -248,6 +248,15 @@ Let's start there. The four-pager. It was due the first of March, which was...</
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-07.mp3" type="audio/mpeg" length="3399724" />
       <pubDate>Fri, 06 Mar 2026 20:17:13 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-07.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 8 Mar 2026</title>
+      <description>Sunday the eighth of March. You're flying home tonight, and there's one thing that actually matters before you board.
+
+The IVC deadline is tomorrow. Stage 1 closes on the ninth. Before you do anything...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-08.mp3" type="audio/mpeg" length="3254274" />
+      <pubDate>Sat, 07 Mar 2026 20:00:16 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-08.mp3</guid>
     </item>
   </channel>
 </rss>
