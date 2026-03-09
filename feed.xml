@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Your personal daily briefing - tasks, calendar, and priorities.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Sat, 07 Mar 2026 20:00:16 -0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Mar 2026 23:10:21 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -257,6 +257,15 @@ The IVC deadline is tomorrow. Stage 1 closes on the ninth. Before you do anythin
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-08.mp3" type="audio/mpeg" length="3254274" />
       <pubDate>Sat, 07 Mar 2026 20:00:16 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-08.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 9 Mar 2026</title>
+      <description>Monday 9 March 2026. It's deadline day, and you're cutting it close.
+
+IVC Stage 1 is due at midnight tonight. The 4-pager - you need to verify right now that it's actually submitted. One minute, inbox...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-09.mp3" type="audio/mpeg" length="3439848" />
+      <pubDate>Sun, 08 Mar 2026 23:10:21 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-09.mp3</guid>
     </item>
   </channel>
 </rss>
