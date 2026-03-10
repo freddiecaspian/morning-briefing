@@ -9,19 +9,22 @@ from agents import run_research_and_compose
 SCRIPTS_DIR = os.path.join(os.path.dirname(__file__), "scripts")
 
 
-def compose_briefing(triage_note_path, today_events, tomorrow_events):
+def compose_briefing(triage_note_path, today_events, tomorrow_events, target_date=None):
     """Call Claude to write an enriched podcast script.
 
     Args:
         triage_note_path: Path to the triage note markdown file.
         today_events: List of calendar event dicts for today.
         tomorrow_events: List of calendar event dicts for tomorrow.
+        target_date: The date the briefing is for (defaults to today).
 
     Returns:
         The script text (plain spoken word).
     """
     now = datetime.now()
-    date_str = now.strftime("%A %-d %B %Y")
+    if target_date is None:
+        target_date = now
+    date_str = target_date.strftime("%A %-d %B %Y")
 
     # Read the full triage note
     with open(triage_note_path, "r") as f:
@@ -36,7 +39,7 @@ def compose_briefing(triage_note_path, today_events, tomorrow_events):
 
     # Save the script as a markdown file for reference
     os.makedirs(SCRIPTS_DIR, exist_ok=True)
-    script_filename = now.strftime("%Y-%m-%d") + ".md"
+    script_filename = target_date.strftime("%Y-%m-%d") + ".md"
     script_path = os.path.join(SCRIPTS_DIR, script_filename)
     with open(script_path, "w") as f:
         f.write(f"# Morning Briefing Script - {date_str}\n\n")

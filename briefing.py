@@ -36,19 +36,28 @@ def open_spotify():
     subprocess.run(["open", "-a", "Spotify"], check=False)
 
 
-def run(skip_triage=False, skip_publish=False, open_player=True):
+def run(skip_triage=False, skip_publish=False, open_player=True, next_day=False):
     """Run the full briefing pipeline.
 
     Args:
         skip_triage: If True, read the latest existing triage note instead of running /triage.
         skip_publish: If True, generate audio but don't push to GitHub.
         open_player: If True, open Spotify after generating.
+        next_day: If True, generate the briefing for tomorrow (calendar shifted +1 day).
+                  Used for the 9pm evening run so the podcast is ready by morning.
     """
     state = load_state()
     now = datetime.now()
-    date_str = now.strftime("%Y-%m-%d")
+    if next_day:
+        from datetime import timedelta
+        target_date = now + timedelta(days=1)
+    else:
+        target_date = now
+    date_str = target_date.strftime("%Y-%m-%d")
 
-    print(f"=== Morning Briefing - {now.strftime('%A %-d %B %Y')} ===\n")
+    print(f"=== Morning Briefing - {target_date.strftime('%A %-d %B %Y')} ===\n")
+    if next_day:
+        print("(Next-day mode: generating tomorrow's briefing)\n")
 
     # Step 1: Run triage (or use existing)
     if skip_triage:
@@ -65,13 +74,18 @@ def run(skip_triage=False, skip_publish=False, open_player=True):
 
     # Step 2: Collect data
     print("Collecting calendar events...")
-    today_events = get_today()
-    tomorrow_events = get_tomorrow()
+    if next_day:
+        from collectors.cal import get_events
+        today_events = get_events(day_offset=1)      # tomorrow becomes "today"
+        tomorrow_events = get_events(day_offset=2)    # day after becomes "tomorrow"
+    else:
+        today_events = get_today()
+        tomorrow_events = get_tomorrow()
     print(f"  Today: {len(today_events)} events, Tomorrow: {len(tomorrow_events)} events")
 
     # Step 3: Claude writes the podcast script (searches vault for context, enriches, synthesises)
     print("Claude is writing your briefing script...")
-    script = compose_briefing(triage_path, today_events, tomorrow_events)
+    script = compose_briefing(triage_path, today_events, tomorrow_events, target_date=target_date)
     print(f"  {len(script.split())} words, {len(script)} characters")
     print(f"\n--- SCRIPT ---\n{script}\n--- END ---\n")
 
@@ -81,7 +95,7 @@ def run(skip_triage=False, skip_publish=False, open_player=True):
     audio_path = generate_audio(script, episode_filename)
 
     # Step 5: Update RSS feed
-    episode_title = f"Briefing - {now.strftime('%-d %b %Y')}"
+    episode_title = f"Briefing - {target_date.strftime('%-d %b %Y')}"
     file_size = os.path.getsize(audio_path)
     create_or_update_feed(
         episode_filename,
@@ -117,4 +131,5 @@ if __name__ == "__main__":
     skip_triage = "--skip-triage" in sys.argv
     skip_publish = "--skip-publish" in sys.argv
     no_open = "--no-open" in sys.argv
-    run(skip_triage=skip_triage, skip_publish=skip_publish, open_player=not no_open)
+    next_day = "--next-day" in sys.argv
+    run(skip_triage=skip_triage, skip_publish=skip_publish, open_player=not no_open, next_day=next_day)

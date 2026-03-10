@@ -44,11 +44,12 @@ def run_triage():
             "/triage",
             "--dangerously-skip-permissions",
             "--allowedTools", "Bash,Edit,Read,Write,Glob,Grep",
+            "--model", "claude-haiku-4-5-20251001",
         ],
         cwd=VAULT,
         capture_output=True,
         text=True,
-        timeout=300,  # 5 min max
+        timeout=600,  # 10 min max
     )
 
     if result.returncode != 0:

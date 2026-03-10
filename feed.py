@@ -17,7 +17,7 @@ PODCAST_AUTHOR = "Freddie"
 PODCAST_LANGUAGE = "en"
 
 
-def create_or_update_feed(episode_filename, episode_title, episode_description, episode_date=None, file_size_bytes=0):
+def create_or_update_feed(episode_filename, episode_title, episode_description, episode_date=None, file_size_bytes=0, duration_seconds=None):
     """Add a new episode to the RSS feed.
 
     Args:
@@ -71,6 +71,9 @@ def create_or_update_feed(episode_filename, episode_title, episode_description, 
     enclosure.set("url", f"{BASE_URL}/episodes/{episode_filename}")
     enclosure.set("type", "audio/mpeg")
     enclosure.set("length", str(file_size_bytes))
+
+    if duration_seconds:
+        ET.SubElement(item, "{http://www.itunes.com/dtds/podcast-1.0.dtd}duration").text = str(int(duration_seconds))
 
     ET.SubElement(item, "pubDate").text = formatdate(mktime(episode_date.timetuple()))
 
