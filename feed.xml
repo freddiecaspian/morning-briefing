@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Your personal daily briefing - tasks, calendar, and priorities.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Thu, 12 Mar 2026 05:59:27 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 12 Mar 2026 06:29:52 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -311,6 +311,14 @@ So. First th...</description>
       <ns0:duration>1669</ns0:duration>
       <pubDate>Thu, 12 Mar 2026 05:59:27 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/cfp-forward-pricing-and-options-2026-03-12.mp3</guid>
+    </item>
+    <item>
+      <title>POM Session 2 - Process Capacity Analysis</title>
+      <description>Pre-lesson companion: bottleneck identification, Littles Law, implied utilisation, multi-product analysis, and Aravind Eye Hospital as a masterclass in process design as strategy.</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/pom-s02-process-capacity.mp3" type="audio/mpeg" length="32965440" />
+      <ns0:duration>1780</ns0:duration>
+      <pubDate>Thu, 12 Mar 2026 06:29:52 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-s02-process-capacity.mp3</guid>
     </item>
   </channel>
 </rss>
