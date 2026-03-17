@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Tue, 17 Mar 2026 08:42:31 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 17 Mar 2026 08:44:59 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -394,6 +394,14 @@ Let's start with the thing that matters most: career coaching w...</description>
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/ma-regionfly-and-the-death-spiral-2026-03-17.mp3" type="audio/mpeg" length="12688771" />
       <ns0:duration>777</ns0:duration>
       <pubDate>Tue, 17 Mar 2026 08:42:31 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ma-regionfly-and-the-death-spiral-2026-03-17.mp3</guid>
+    </item>
+    <item>
+      <title>MA - RegionFly and the Death Spiral</title>
+      <description>[LILY] So here's a story. There's an airline called RegionFly. Premium carrier, southeastern US, founded 1971. Seven routes, beautiful service. The kind of airline where your flight attendant knows yo...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/ma-regionfly-and-the-death-spiral-2026-03-17.mp3" type="audio/mpeg" length="12563381" />
+      <ns0:duration>777</ns0:duration>
+      <pubDate>Tue, 17 Mar 2026 08:44:59 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ma-regionfly-and-the-death-spiral-2026-03-17.mp3</guid>
     </item>
   </channel>
