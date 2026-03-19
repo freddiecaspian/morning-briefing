@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Wed, 18 Mar 2026 20:00:00 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 19 Mar 2026 07:00:43 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -421,6 +421,14 @@ Let's start with what actually matters. You've got a psychiatrist consultation a
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-19.mp3" type="audio/mpeg" length="3494182" />
       <pubDate>Wed, 18 Mar 2026 20:00:00 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-19.mp3</guid>
+    </item>
+    <item>
+      <title>POM - Resequencing and Timbuk2</title>
+      <description>[LILY] It's 2002. You're sitting at your computer, on a website called Timbuk2. You're designing a messenger bag. You pick a colour for the left panel. A different colour for the centre. A third for t...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/pom-resequencing-and-timbuk2-2026-03-19.mp3" type="audio/mpeg" length="10708508" />
+      <ns0:duration>646</ns0:duration>
+      <pubDate>Thu, 19 Mar 2026 07:00:43 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-resequencing-and-timbuk2-2026-03-19.mp3</guid>
     </item>
   </channel>
 </rss>
