@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Sun, 29 Mar 2026 19:00:06 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Mar 2026 19:00:04 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -532,6 +532,13 @@ Your morning's locked. CFP at quarter past ten, then straight into POM at noon. 
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-30.mp3" type="audio/mpeg" length="3535560" />
       <pubDate>Sun, 29 Mar 2026 19:00:06 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-30.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 31 Mar 2026</title>
+      <description>Tuesday the thirty-first of March. It's one of those days where the calendar wins - four classes, a virtual talk, and somehow three dinner commitments all fighting for the same evening slot. Let's mak...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-31.mp3" type="audio/mpeg" length="3703580" />
+      <pubDate>Mon, 30 Mar 2026 19:00:04 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-03-31.mp3</guid>
     </item>
   </channel>
 </rss>
