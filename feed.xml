@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Tue, 31 Mar 2026 11:18:24 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 31 Mar 2026 22:13:25 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -555,6 +555,15 @@ Your morning's locked. CFP at quarter past ten, then straight into POM at noon. 
       <ns0:duration>2214</ns0:duration>
       <pubDate>Tue, 31 Mar 2026 11:18:24 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ob2-networks-and-power--v3-deep-dive-2026-03-31.mp3</guid>
+    </item>
+    <item>
+      <title>Briefing - 1 Apr 2026</title>
+      <description>Wednesday the first of April. It's one of those days where the calendar looks busier than it actually is - once you untangle it.
+
+First thing: you've got a conflict this morning that needs sorting bef...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/2026-04-01.mp3" type="audio/mpeg" length="2904024" />
+      <pubDate>Tue, 31 Mar 2026 22:13:25 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/2026-04-01.mp3</guid>
     </item>
   </channel>
 </rss>
