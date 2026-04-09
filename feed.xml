@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Mon, 06 Apr 2026 20:45:42 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Apr 2026 05:45:49 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -685,6 +685,16 @@ But first - today. You've got a clean morning, nothing until two o'clock. That's
       <ns0:duration>1199</ns0:duration>
       <pubDate>Mon, 06 Apr 2026 20:45:42 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/mcv-algramo-2026-04-06.mp3</guid>
+    </item>
+    <item>
+      <title>POM - Revenue Management</title>
+      <description>[LILY] Two people. Same flight. London Heathrow to New York JFK. Same date, same time, economy cabin. One paid two hundred and forty pounds. The other paid eleven hundred.
+
+[JESS] That's happened to m...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/pom-revenue-management-2026-04-09.mp3" type="audio/mpeg" length="7352703" />
+      <ns0:duration>480</ns0:duration>
+      <pubDate>Thu, 09 Apr 2026 05:45:49 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-revenue-management-2026-04-09.mp3</guid>
     </item>
   </channel>
 </rss>
