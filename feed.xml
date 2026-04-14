@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Thu, 09 Apr 2026 05:45:49 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 11:49:35 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -695,6 +695,14 @@ But first - today. You've got a clean morning, nothing until two o'clock. That's
       <ns0:duration>480</ns0:duration>
       <pubDate>Thu, 09 Apr 2026 05:45:49 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-revenue-management-2026-04-09.mp3</guid>
+    </item>
+    <item>
+      <title>OB2 - GitLab and All-Remote Work</title>
+      <description>[LILY] Picture this. It's 2015 and a company has just rented a nice new office in San Francisco. Desks, monitors, the whole thing. And within weeks, it's empty. The CEO walks through rows of unoccupie...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/ob2-gitlab-and-all-remote-work-2026-04-14.mp3" type="audio/mpeg" length="9651477" />
+      <ns0:duration>617</ns0:duration>
+      <pubDate>Tue, 14 Apr 2026 11:49:35 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ob2-gitlab-and-all-remote-work-2026-04-14.mp3</guid>
     </item>
   </channel>
 </rss>
