@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Thu, 16 Apr 2026 01:46:08 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Apr 2026 12:06:05 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -715,6 +715,27 @@ But first - today. You've got a clean morning, nothing until two o'clock. That's
       <ns0:duration>1194</ns0:duration>
       <pubDate>Thu, 16 Apr 2026 01:46:08 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/cfp-payout-policy-the-dividend-puzzle-2026-04-16.mp3</guid>
+    </item>
+    <item>
+      <title>OB2 Video Memo - WPP OrgDNA</title>
+      <description>Format: Duo podcast - Lily (guide) and Jess (listener avatar)
+Runtime target: 10-11 minutes
+Voices: Lily (British female), Jess (British female)
+Slide cues: Marked with [SLIDE X] for video sync
+
+[SLID...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/ob2-video-memo---2026-04-18.mp3" type="audio/mpeg" length="14645207" />
+      <ns0:duration>888</ns0:duration>
+      <pubDate>Sat, 18 Apr 2026 05:12:03 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ob2-video-memo---2026-04-18.mp3</guid>
+    </item>
+    <item>
+      <title>POM Tutorial Session 1 - Process Improvement</title>
+      <description>[LILY] Here's a question. You're running a tiny factory. Three workers. You have to make two hundred and fifty dolls. Each doll takes forty minutes from start to finish, end to end. How long does the ...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/pom-tutorial-session-1-process-improvement-2026-04-20.mp3" type="audio/mpeg" length="27878453" />
+      <ns0:duration>1840</ns0:duration>
+      <pubDate>Mon, 20 Apr 2026 12:06:05 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-tutorial-session-1-process-improvement-2026-04-20.mp3</guid>
     </item>
   </channel>
 </rss>
