@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Mon, 20 Apr 2026 12:06:05 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 Apr 2026 09:19:34 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -736,6 +736,18 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>1840</ns0:duration>
       <pubDate>Mon, 20 Apr 2026 12:06:05 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-tutorial-session-1-process-improvement-2026-04-20.mp3</guid>
+    </item>
+    <item>
+      <title>POM - Tutorial 2 Managing Variability</title>
+      <description>[LILY] Here's a number. Twenty-seven hours.
+
+[JESS] Okay.
+
+[LILY] That's how long a semiconductor fab in the Paris suburbs waits for a tech rep to show up and fix a broken machine. Not the repair itse...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/pom-tutorial-2-managing-variability-2026-04-21.mp3" type="audio/mpeg" length="27424102" />
+      <ns0:duration>1827</ns0:duration>
+      <pubDate>Tue, 21 Apr 2026 09:19:34 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pom-tutorial-2-managing-variability-2026-04-21.mp3</guid>
     </item>
   </channel>
 </rss>
