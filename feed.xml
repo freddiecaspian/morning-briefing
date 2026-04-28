@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Thu, 23 Apr 2026 06:16:08 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 06:23:40 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -764,6 +764,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>3037</ns0:duration>
       <pubDate>Thu, 23 Apr 2026 06:16:08 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/cfp-capital-structure-to-payout-2026-04-23.mp3</guid>
+    </item>
+    <item>
+      <title>OB2 Exam Prep - Companion Final</title>
+      <description>[LILY] Right Freddie, this is your last walk before the OB2 group exam. Twenty minutes. By the end of this you'll know what each of your three classmates is going to say, where they're weakest, and ex...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/ob2-exam-prep-companion-final-2026-04-28.mp3" type="audio/mpeg" length="20979764" />
+      <ns0:duration>1180</ns0:duration>
+      <pubDate>Tue, 28 Apr 2026 06:23:40 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/ob2-exam-prep-companion-final-2026-04-28.mp3</guid>
     </item>
   </channel>
 </rss>
