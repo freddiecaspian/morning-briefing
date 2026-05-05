@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Tue, 05 May 2026 08:18:56 -0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 May 2026 15:17:25 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -775,7 +775,7 @@ Slide cues: Marked with [SLIDE X] for video sync
     </item>
     <item>
       <title>NightDraft - 24 Threads In</title>
-      <description>[LILY] Tuesday the twenty-fourth of March. Ten forty-four in the morning. An email lands in the inbox at a small restaurant in Victoria called Lorne. Forty-two covers, Bib Gourmand, run by a woman cal...</description>
+      <description>[LILY] Tuesday the twenty-fourth of March. Ten forty-four in the morning. An email lands in the inbox at a small restaurant in Victoria called Lorne. Forty-two covers, wine-led, run by a woman cal...</description>
       <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/nightdraft-progress-2026-05-01.mp3" type="audio/mpeg" length="30761588" />
       <ns0:duration>2100</ns0:duration>
       <pubDate>Fri, 01 May 2026 06:41:06 -0000</pubDate>
@@ -826,6 +826,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>2111</ns0:duration>
       <pubDate>Tue, 05 May 2026 08:18:56 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/mac-s02-saving-investment-and-real-rates-2026-05-05.mp3</guid>
+    </item>
+    <item>
+      <title>NightDraft - Architecture Explainer</title>
+      <description>[LILY] So Freddie's been sat with this restaurant for nearly a year now. Lorne, in Victoria. Bib Gourmand, about forty-two covers, run by a friend of his called Katie. And the thing he keeps watching ...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/nightdraft-architecture-2026-05-05.mp3" type="audio/mpeg" length="19708215" />
+      <ns0:duration>1265</ns0:duration>
+      <pubDate>Tue, 05 May 2026 15:17:25 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/nightdraft-architecture-2026-05-05.mp3</guid>
     </item>
   </channel>
 </rss>
