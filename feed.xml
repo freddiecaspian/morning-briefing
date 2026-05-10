@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Tue, 05 May 2026 15:17:25 -0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 18:37:54 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -834,6 +834,18 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>1265</ns0:duration>
       <pubDate>Tue, 05 May 2026 15:17:25 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/nightdraft-architecture-2026-05-05.mp3</guid>
+    </item>
+    <item>
+      <title>BSE - Rio Tinto and Juukan Gorge</title>
+      <description>[LILY] May 24th, 2020. Western Australia. A man pushes a button.
+[LILY] Sixty-six tonnes of explosive go off at a place called Juukan Gorge.
+
+[LILY] Two caves. Forty-six thousand years old.
+[JESS]  Fo...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/bse-rio-tinto-and-juukan-gorge-2026-05-10.mp3" type="audio/mpeg" length="18074088" />
+      <ns0:duration>1127</ns0:duration>
+      <pubDate>Sun, 10 May 2026 18:37:54 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/bse-rio-tinto-and-juukan-gorge-2026-05-10.mp3</guid>
     </item>
   </channel>
 </rss>
