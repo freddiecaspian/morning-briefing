@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Sun, 10 May 2026 18:40:56 -0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 May 2026 18:43:45 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -857,6 +857,16 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>951</ns0:duration>
       <pubDate>Sun, 10 May 2026 18:40:56 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/bsp-whatsapp-tech-watchdogs-2026-05-10.mp3</guid>
+    </item>
+    <item>
+      <title>MAC - Growth and Why Countries Stay Poor</title>
+      <description>[LILY] 1960. South Korea. Per capita GDP - twelve hundred dollars.
+[JESS] Okay.
+[LILY] That's lower than Bangladesh. Lower than Nigeria. Lower than Bolivia. About six percent of the GDP of the United ...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/mac-growth-and-why-countries-stay-poor-2026-05-10.mp3" type="audio/mpeg" length="14297898" />
+      <ns0:duration>850</ns0:duration>
+      <pubDate>Sun, 10 May 2026 18:43:45 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/mac-growth-and-why-countries-stay-poor-2026-05-10.mp3</guid>
     </item>
   </channel>
 </rss>
