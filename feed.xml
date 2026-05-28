@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Wed, 27 May 2026 15:43:09 -0000</lastBuildDate>
+    <lastBuildDate>Thu, 28 May 2026 07:56:17 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -895,6 +895,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>924</ns0:duration>
       <pubDate>Wed, 27 May 2026 15:43:09 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/pre-match-olivier-michel.m4a</guid>
+    </item>
+    <item>
+      <title>Live Coding Stream as Career Signal -</title>
+      <description>There's a daily tech show. It started in someone's spare room in October of 2024. Three people, no outside money, a camera, and a slot they hit every single weekday. By April of 2026, OpenAI bought it...</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/live-coding-stream-as-career-signal---2026-05-28.mp3" type="audio/mpeg" length="23560400" />
+      <ns0:duration>1579</ns0:duration>
+      <pubDate>Thu, 28 May 2026 07:56:17 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/live-coding-stream-as-career-signal---2026-05-28.mp3</guid>
     </item>
   </channel>
 </rss>
