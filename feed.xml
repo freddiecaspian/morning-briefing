@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Sun, 07 Jun 2026 19:58:44 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Sep 2026 14:08:39 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -943,6 +943,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>1780</ns0:duration>
       <pubDate>Sun, 07 Jun 2026 19:58:44 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/how-llms-work-2026-06-07.mp3</guid>
+    </item>
+    <item>
+      <title>MAC Exam - The Ten Machines</title>
+      <description>A cram episode for the Macroeconomics in the Global Economy final. Two hosts work through the ten mechanisms that recur across every published past paper: the balance of payments identity, real versus nominal, the real appreciation split, money and the multiplier, IS-LM in an open economy, the Taylor rule and credibility, the two ends of the yield curve, debt sustainability arithmetic, growth as productivity plus hours, and the world real interest rate. Built from a pass over fourteen past papers.</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/mac-exam-the-ten-machines-2026-09-07.mp3" type="audio/mpeg" length="24963501" />
+      <ns0:duration>3120</ns0:duration>
+      <pubDate>Mon, 07 Sep 2026 14:08:39 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/mac-exam-the-ten-machines-2026-09-07.mp3</guid>
     </item>
   </channel>
 </rss>
