@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Thu, 10 Sep 2026 06:04:21 -0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Sep 2026 05:40:51 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -959,6 +959,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>2698</ns0:duration>
       <pubDate>Thu, 10 Sep 2026 06:04:21 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/bspe-final-exam-drive-2026-09-10.mp3</guid>
+    </item>
+    <item>
+      <title>SPSD Session 04 - Selection, Prototyping and the Overall Process</title>
+      <description>Pre-lesson companion for Strategies for Product and Service Development, Session 04 with Jurgen Mihm. Microsoft's innovation team generated twelve hundred ideas in a year and moved three prototypes into product groups. Why that number has nothing to do with idea quality. Concept selection as an ignorance detector rather than a ranking tool, prototypes as instruments for buying one specific piece of information, phase gates as the right to say no, and the incentive system that quietly decided the outcome. Built on the Darden case Innovation Strategy at Microsoft, Clouds on the Horizon.</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/spsd-selection-prototyping-2026-09-16.mp3" type="audio/mpeg" length="22794285" />
+      <ns0:duration>1424</ns0:duration>
+      <pubDate>Wed, 16 Sep 2026 05:40:51 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/spsd-selection-prototyping-2026-09-16.mp3</guid>
     </item>
   </channel>
 </rss>
