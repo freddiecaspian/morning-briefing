@@ -8,7 +8,7 @@
     <ns0:author>Freddie</ns0:author>
     <ns0:summary>Daily briefings, INSEAD pre-lesson podcasts, and other audio from Freddie's vault.</ns0:summary>
     <ns0:explicit>no</ns0:explicit>
-    <lastBuildDate>Wed, 16 Sep 2026 05:40:51 -0000</lastBuildDate>
+    <lastBuildDate>Mon, 28 Sep 2026 07:16:49 -0000</lastBuildDate>
     <item>
       <title>Briefing - 15 Feb 2026</title>
       <description>Good morning Freddie. It's Sunday the fifteenth of February, and you've got a quiet day ahead which is good because tomorrow's packed.
@@ -967,6 +967,14 @@ Slide cues: Marked with [SLIDE X] for video sync
       <ns0:duration>1424</ns0:duration>
       <pubDate>Wed, 16 Sep 2026 05:40:51 -0000</pubDate>
       <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/spsd-selection-prototyping-2026-09-16.mp3</guid>
+    </item>
+    <item>
+      <title>BOS - Blue Ocean Catch-Up, Sessions 1 to 6</title>
+      <description>Lily and Jess catch up on everything Blue Ocean Strategy has covered so far: industry common nonsense, value innovation (Formule1, Prodigy Finance, the IPL), the As-Is canvas, noncustomers and the Buyer Utility Map (ActiFry, Salesforce, Chateau de Fontainebleau), then the Six Paths and ERRC through today's PetWellClinic case.</description>
+      <enclosure url="https://freddiecaspian.github.io/morning-briefing/episodes/bos-catch-up-sessions-1-6-2026-09-28.mp3" type="audio/mpeg" length="44980653" />
+      <ns0:duration>2811</ns0:duration>
+      <pubDate>Mon, 28 Sep 2026 07:16:49 -0000</pubDate>
+      <guid isPermaLink="true">https://freddiecaspian.github.io/morning-briefing/episodes/bos-catch-up-sessions-1-6-2026-09-28.mp3</guid>
     </item>
   </channel>
 </rss>
